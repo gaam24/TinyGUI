@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<AssemblyName>Tinify.Unofficial</AssemblyName>
+		<AssemblyTitle>Tinify.Unofficial</AssemblyTitle>
+		<Product>Tinify-Unofficial</Product>
+		<Authors>Tinify;Jeff Shergalis;gam24</Authors>
+		<VersionPrefix>1.0.3-1</VersionPrefix>
+
+		<EnableNETAnalyzers>True</EnableNETAnalyzers>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>latest-recommended</AnalysisLevel>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.HighPerformance" Version="8.1.0" />
+		<PackageReference Include="System.Text.Json" Version="7.0.2" />
+	</ItemGroup>
+
+</Project>
