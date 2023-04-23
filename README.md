@@ -3,9 +3,9 @@
 Simple program with visual interface to compress images using TinyJPG.
 
 <p align="middle">
-  <img src="https://i.imgur.com/vkR5DMI.png" width="500" align="middle"/>
-  <img src="https://i.imgur.com/oZHmw8O.png" width="500" align="middle"/>
-  <img src="https://i.imgur.com/bSrwVcn.png" width="500" align="middle"/>
+  <img src="https://i.imgur.com/vkR5DMI.png" width="410" align="middle"/>
+  <img src="https://i.imgur.com/oZHmw8O.png" width="410" align="middle"/>
+  <img src="https://i.imgur.com/bSrwVcn.png" width="410" align="middle"/>
 </p>
 
 # Features
