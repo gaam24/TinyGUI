@@ -24,3 +24,6 @@ Simple program with visual interface to compress images using TinyJPG.
 **Compressed Name** - Style in which the compressed image will be saved. *[Variable {name} return original file name]*
 
 **Compressing Threads** - Max threads (API) running to compress images.
+
+# Using
+[Tinify Unofficial](https://github.com/jshergal/tinify-net-unofficial) - Unoficial fork of Tinify API Client used to TinyJPG and TinyPNG. (I slightly modified it for the needs of the application)
