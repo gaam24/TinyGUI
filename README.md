@@ -13,8 +13,11 @@ Simple program with visual interface to compress images using TinyJPG/TinyPNG.
 - Multithreading compressing.
 - Number of compressed images.
 - Number of requests made through the API.
+- Settings (with saving to json).
 
 # Settings
+**API Keys** - List of API keys. Get the key on [TinyJPG](https://tinyjpg.com/developers).
+
 **API Parser Threads** - Maximum number of running threads when checking API keys.
 
 **Max Requests Per API** - Maximum number of requests per API. When splitting images, it will add as many images to the API as there are requests left (images are split to each API one at a time). If the API has no more requests it will not be counted when splitting.
@@ -30,3 +33,6 @@ Simple program with visual interface to compress images using TinyJPG/TinyPNG.
 
 # Using
 [Tinify Unofficial](https://github.com/jshergal/tinify-net-unofficial) - Unoficial fork of Tinify API Client used to TinyJPG and TinyPNG. (I modified it slightly)
+
+# License
+This software is licensed under the MIT License. [View the license](LICENSE).
