@@ -30,7 +30,7 @@ namespace TinyGUI.UI.Windows
             btnNewVersion.Hide();
             btnNewVersion.Click += BtnNewVersion_Click;
             Program.TinyJPG.OnVersionChecked += TinyJPG_OnVersionChecked;
-            Program.TinyJPG.CheckVersion("TinyGUI.UI.Windows", Application.ProductVersion);
+            Program.TinyJPG.CheckVersionAsync("TinyGUI.UI.Windows", Application.ProductVersion);
 
             // Usage Timer
             timer.Elapsed += ElapsedEventHandler;

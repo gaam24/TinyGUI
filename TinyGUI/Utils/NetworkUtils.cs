@@ -6,7 +6,7 @@ namespace TinyGUI.Utils
     {
         private static readonly string link = "https://raw.githubusercontent.com/gaam24/TinyGUI/main/versions.json";
 
-        internal static async Task<string?> GetVersion(string type)
+        internal static async Task<string?> GetVersionAsync(string type)
         {
             using var httpClient = new HttpClient();
             try

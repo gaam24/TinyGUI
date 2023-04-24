@@ -37,10 +37,17 @@ namespace TinyGUI
             _statistics = tinySave.LoadStatistics();
         }
 
-        public async void CheckVersion(string versionType, string currentVersion)
+        public async void CheckVersionAsync(string versionType, string currentVersion)
         {
-            var version = await NetworkUtils.GetVersion(versionType).ConfigureAwait(true);
-            OnVersionChecked?.Invoke(this, new VersionCheckedEventArgs(version, currentVersion));
+            try
+            {
+                var version = await NetworkUtils.GetVersionAsync(versionType).ConfigureAwait(true);
+                OnVersionChecked?.Invoke(this, new VersionCheckedEventArgs(version, currentVersion));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex); //TODO: Change?
+            }
         }
 
         public async Task CompressAsync(TinyCompression compression)

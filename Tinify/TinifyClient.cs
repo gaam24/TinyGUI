@@ -23,9 +23,9 @@ namespace Tinify
         private readonly Uri ShrinkUri = new("/shrink", UriKind.Relative);
 
         private readonly SocketsHttpHandler SocketHandler = new() { PooledConnectionLifetime = TimeSpan.FromMinutes(5) };
-        
+
         private int _compressionCount;
-        public int CompressionCount { get { return _compressionCount;  } }
+        public int CompressionCount { get { return _compressionCount; } }
 
         /// <summary>
         /// Creates a new Client object for accessing the Tinify API
