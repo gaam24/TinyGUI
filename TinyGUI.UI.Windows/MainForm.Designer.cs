@@ -37,6 +37,7 @@
             btnDashboard = new Button();
             pnlLogo = new Panel();
             lblLogo = new Label();
+            btnNewVersion = new Button();
             pnlTitleBar = new Panel();
             lblTitle = new Label();
             kpForm = new Krypton.Toolkit.KryptonPanel();
@@ -55,6 +56,7 @@
             pnlMenu.Controls.Add(btnSettings);
             pnlMenu.Controls.Add(btnDashboard);
             pnlMenu.Controls.Add(pnlLogo);
+            pnlMenu.Controls.Add(btnNewVersion);
             pnlMenu.Dock = DockStyle.Left;
             pnlMenu.Location = new Point(0, 0);
             pnlMenu.Name = "pnlMenu";
@@ -78,7 +80,7 @@
             btnConsole.ForeColor = Color.Gainsboro;
             btnConsole.Image = Properties.Resources.Progress;
             btnConsole.ImageAlign = ContentAlignment.MiddleLeft;
-            btnConsole.Location = new Point(0, 462);
+            btnConsole.Location = new Point(0, 432);
             btnConsole.Name = "btnConsole";
             btnConsole.Padding = new Padding(12, 0, 0, 0);
             btnConsole.Size = new Size(220, 60);
@@ -116,7 +118,7 @@
             btnSettings.ForeColor = Color.Gainsboro;
             btnSettings.Image = Properties.Resources.Settings;
             btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(0, 522);
+            btnSettings.Location = new Point(0, 492);
             btnSettings.Name = "btnSettings";
             btnSettings.Padding = new Padding(12, 0, 0, 0);
             btnSettings.Size = new Size(220, 60);
@@ -167,6 +169,21 @@
             lblLogo.TabIndex = 0;
             lblLogo.Text = "TinyGUI";
             lblLogo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnNewVersion
+            // 
+            btnNewVersion.BackColor = Color.FromArgb(36, 36, 54);
+            btnNewVersion.Dock = DockStyle.Bottom;
+            btnNewVersion.FlatAppearance.BorderSize = 0;
+            btnNewVersion.FlatStyle = FlatStyle.Flat;
+            btnNewVersion.Font = new Font("Roboto", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNewVersion.ForeColor = Color.FromArgb(255, 128, 128);
+            btnNewVersion.Location = new Point(0, 552);
+            btnNewVersion.Name = "btnNewVersion";
+            btnNewVersion.Size = new Size(220, 30);
+            btnNewVersion.TabIndex = 5;
+            btnNewVersion.Text = "New Version {version}";
+            btnNewVersion.UseVisualStyleBackColor = false;
             // 
             // pnlTitleBar
             // 
@@ -240,5 +257,6 @@
         private Panel pnlNav;
         private Button btnConsole;
         private Krypton.Toolkit.KryptonPanel kpForm;
+        private Button btnNewVersion;
     }
 }

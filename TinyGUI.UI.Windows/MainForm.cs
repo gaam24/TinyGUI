@@ -1,8 +1,9 @@
-using Timer = System.Timers.Timer;
-using TinyGUI.UI.Windows.Forms;
-using System.Timers;
 using System.Diagnostics;
 using System.Globalization;
+using System.Timers;
+using TinyGUI.Events;
+using TinyGUI.UI.Windows.Forms;
+using Timer = System.Timers.Timer;
 
 namespace TinyGUI.UI.Windows
 {
@@ -12,15 +13,24 @@ namespace TinyGUI.UI.Windows
         private readonly Timer timer = new(800);
         private readonly string defaultTitle;
 
+        private readonly string defaultNewVersionText;
+
         public MainForm()
         {
             InitializeComponent();
-            defaultTitle = Text;
+            defaultTitle = $"{Text} v{Application.ProductVersion}";
+            defaultNewVersionText = btnNewVersion.Text;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             RegisterButtons();
+
+            // New Version
+            btnNewVersion.Hide();
+            btnNewVersion.Click += BtnNewVersion_Click;
+            Program.TinyJPG.OnVersionChecked += TinyJPG_OnVersionChecked;
+            Program.TinyJPG.CheckVersion("TinyGUI.UI.Windows", Application.ProductVersion);
 
             // Usage Timer
             timer.Elapsed += ElapsedEventHandler;
@@ -60,6 +70,33 @@ namespace TinyGUI.UI.Windows
 
             // Save Settings
             Program.TinyJPG.Save();
+        }
+
+        private void TinyJPG_OnVersionChecked(object sender, VersionCheckedEventArgs e)
+        {
+            if (e.NewestVersion)
+            {
+                btnNewVersion.BeginInvoke(new Action(() =>
+                {
+                    string text = defaultNewVersionText;
+                    text = text.Replace("{version}", e.Version);
+
+                    btnNewVersion.Text = text;
+                    btnNewVersion.Show();
+                }));
+            }
+        }
+
+        private void BtnNewVersion_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("explorer", "https://github.com/gaam24/TinyGUI/releases/latest");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
