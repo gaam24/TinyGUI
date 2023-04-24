@@ -39,12 +39,12 @@ namespace TinyGUI.UI.Windows
 
         private void RegisterButtons()
         {
-            MenuManager formsManager = new(lblTitle, pnlTitleBar, kpForm, pnlNav);
+            MenuManager formsManager = new(lblTitle, pnlTitleBar, kpForm);
 
-            formsManager.AddButton("Dashboard", btnDashboard, new DashboardForm());
-            formsManager.AddButton("Compress", btnCompress, new CompressForm());
-            formsManager.AddButton("Console", btnConsole, new ConsoleForm());
-            formsManager.AddButton("Settings", btnSettings, new SettingsForm());
+            formsManager.AddButton("Dashboard", kbDashboard, new DashboardForm());
+            formsManager.AddButton("Compress", kbCompress, new CompressForm());
+            formsManager.AddButton("Console", kbConsole, new ConsoleForm());
+            formsManager.AddButton("Settings", kbSettings, new SettingsForm());
 
             formsManager.AddForceLoad("Console");
             formsManager.AddForceLoad("Settings");

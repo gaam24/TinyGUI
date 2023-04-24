@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using Krypton.Toolkit;
+using System.Globalization;
 using TinyGUI.UI.Windows.Data;
 using TinyGUI.UI.Windows.Events;
 
@@ -15,18 +16,18 @@ namespace TinyGUI.UI.Windows
         private readonly Panel titlePanel;
 
         private readonly Panel formPanel;
-        private readonly Panel navigationPanel;
 
-        public MenuManager(Label titleLabel, Panel titlePanel, Panel formPanel, Panel navigationPanel)
+        private KryptonButton? oldButton;
+
+        public MenuManager(Label titleLabel, Panel titlePanel, Panel formPanel)
         {
             this.titleLabel = titleLabel;
             this.titlePanel = titlePanel;
 
             this.formPanel = formPanel;
-            this.navigationPanel = navigationPanel;
         }
 
-        public void AddButton(string title, Button button, UserControl control)
+        public void AddButton(string title, KryptonButton button, UserControl control)
         {
             control.BackColor = Color.Transparent;
 
@@ -68,16 +69,19 @@ namespace TinyGUI.UI.Windows
         private void ButtonClickEvent(MenuButtonClickEventArgs e)
         {
             MenuButton menuButton = e.MenuButton;
-            Button button = menuButton.Button;
+            KryptonButton button = menuButton.Button;
 
             // Set title
             titleLabel.Text = menuButton.Title.ToUpper(CultureInfo.InvariantCulture);
             titleLabel.Location = new Point(titlePanel.Width / 2 - titleLabel.Width / 2, titlePanel.Height / 2 - titleLabel.Height / 2);
 
-            // Set button navigation.
-            navigationPanel.Height = button.Height - 20;
-            navigationPanel.Top = button.Top + 10;
-            navigationPanel.Left = button.Left;
+            // Disable button and enable previous.
+            button.Enabled = false;
+            if (oldButton != null)
+            {
+                oldButton.Enabled = true;
+            }
+            oldButton = button;
 
             // Set UserControl
             formPanel.Controls.Clear();
