@@ -1,7 +1,7 @@
 ﻿using System.Timers;
 using TinyGUI.UI.Windows.Events;
-using TinyGUI.UI.Windows.Utils;
 using TinyGUI.UI.Windows.Handlers;
+using TinyGUI.UI.Windows.Utils;
 using Timer = System.Timers.Timer;
 
 namespace TinyGUI.UI.Windows.Data

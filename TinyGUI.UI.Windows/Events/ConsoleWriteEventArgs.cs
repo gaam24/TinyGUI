@@ -4,9 +4,9 @@
     {
         public string Text { get; }
 
-        public ConsoleWriteEventArgs(string text) 
-        {  
-            Text = text; 
+        public ConsoleWriteEventArgs(string text)
+        {
+            Text = text;
         }
     }
 }

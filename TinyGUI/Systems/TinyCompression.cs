@@ -15,9 +15,9 @@ namespace TinyGUI.Systems
         public event CompressingAPIUpdateHandler? APIUpdate;
         public event CompressingEndedHandler? LoadingEnded;
 
-        public void UpdateList(List<string> filesPaths) 
-        { 
-            this.filesPaths = new List<string>(filesPaths); 
+        public void UpdateList(List<string> filesPaths)
+        {
+            this.filesPaths = new List<string>(filesPaths);
         }
 
         internal async Task CompressAsync(TinySettings settings, TinyStatistics statistics, List<APIKey> apiKeys)
@@ -69,7 +69,7 @@ namespace TinyGUI.Systems
                                 // Create File Name
                                 var fileName = settings.CompressedName;
                                 fileName = fileName.Replace("{name}", $"{name}");
-                                
+
                                 // Save File
                                 var optimizedFile = Path.Combine(optimizedFolder, $"{fileName}{ext}");
                                 await optimizedImage.ToFileAsync(optimizedFile).ConfigureAwait(false);
@@ -98,16 +98,16 @@ namespace TinyGUI.Systems
                     semaphore.Release();
                     apiWatch.Stop();
 
-                    APIDone?.Invoke(this, new CompressingAPIDoneEventArgs(apiKey, 
-                        filesPaths, optimizedPaths, 
+                    APIDone?.Invoke(this, new CompressingAPIDoneEventArgs(apiKey,
+                        filesPaths, optimizedPaths,
                         apiWatch.Elapsed, watch.Elapsed));
                 }));
             }
             await Task.WhenAll(tasks).ConfigureAwait(false);
             watch.Stop();
 
-            LoadingEnded?.Invoke(this, new CompressingEndedEventArgs(apiKeys, 
-                filesPaths, optimizedPaths, 
+            LoadingEnded?.Invoke(this, new CompressingEndedEventArgs(apiKeys,
+                filesPaths, optimizedPaths,
                 watch.Elapsed));
         }
     }

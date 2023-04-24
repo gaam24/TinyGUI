@@ -1,9 +1,8 @@
-
 namespace TinyGUI.UI.Windows
 {
     internal static class Program
     {
-        public static TinyJPG TinyJPG = new TinyJPG();
+        public static TinyJPG TinyJPG = new();
 
         /// <summary>
         /// The main entry point for the application.

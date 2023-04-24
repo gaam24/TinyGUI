@@ -213,7 +213,7 @@ namespace TinyGUI.UI.Windows.Forms
             {
                 realApiKeys = ktbAPIKeys.Text;
 
-                string final = "";
+                string final = string.Empty;
                 foreach (var key in ListUtils.StringToList(ktbAPIKeys.Text))
                 {
                     final += $"{StringUtils.GetCoveredText(key, showMax: 5)}{Environment.NewLine}";

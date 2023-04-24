@@ -1,8 +1,5 @@
 ﻿using Krypton.Toolkit;
-using System.Diagnostics;
-using Timer = System.Timers.Timer;
 using TinyGUI.UI.Windows.Utils;
-using System.Timers;
 
 namespace TinyGUI.UI.Windows.Forms
 {

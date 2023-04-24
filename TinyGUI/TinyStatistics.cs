@@ -10,7 +10,7 @@ namespace TinyGUI
         private int _compressedImages;
         public int CompressedImages
         {
-            get => _compressedImages; 
+            get => _compressedImages;
             set => _compressedImages = value;
         }
 

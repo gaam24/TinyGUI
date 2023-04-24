@@ -47,11 +47,11 @@ namespace TinyGUI.UI.Windows
         private void AppendText(string? text)
         {
             if (string.IsNullOrWhiteSpace(text)) return;
-            
+
             console.BeginInvoke(new Action(() =>
             {
                 var time = DateTime.Now.ToString("yyyy'-'MM'-'dd' 'HH':'mm':'ss", CultureInfo.InvariantCulture);
-                if (text.Contains(Environment.NewLine) || text.Contains('\n')) 
+                if (text.Contains(Environment.NewLine) || text.Contains('\n'))
                 {
                     console.Items.Add($"[{time}] {text}");
                 }
@@ -61,7 +61,7 @@ namespace TinyGUI.UI.Windows
                     if (index < 0)
                     {
                         console.Items.Add($"[{time}] {text}");
-                    }    
+                    }
                     else
                     {
                         console.Items[index] += text;

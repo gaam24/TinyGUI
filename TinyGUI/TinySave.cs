@@ -26,7 +26,7 @@ namespace TinyGUI
                 {
                     Directory.CreateDirectory(folderPath);
                 }
-            } 
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString()); // TODO: Add Exceptions

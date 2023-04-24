@@ -12,8 +12,8 @@ namespace TinyGUI.Events
         public TimeSpan Elapsed { get; }
         public TimeSpan TotalElapsed { get; }
 
-        public CompressingAPIDoneEventArgs(APIKey apiKey, 
-            List<string> allFilesList, List<string> allCompressedList, 
+        public CompressingAPIDoneEventArgs(APIKey apiKey,
+            List<string> allFilesList, List<string> allCompressedList,
             TimeSpan elapsed, TimeSpan totalElapsed)
         {
             APIKey = apiKey;

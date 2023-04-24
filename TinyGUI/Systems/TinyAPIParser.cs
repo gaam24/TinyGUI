@@ -52,7 +52,7 @@ namespace TinyGUI.Systems
                 return new { ApiKey = apiKey };
             })).ConfigureAwait(false);
             watch.Stop();
-            
+
             // Save rawKeys to settings.
             settings.APIKeys = rawKeys;
 

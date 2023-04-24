@@ -29,7 +29,7 @@ namespace TinyGUI.UI.Windows.Utils
 
             StringBuilder final = new(text.Length);
             for (int i = 0; i < length; i++) final.Append(i < showChars ? text[i] : replaced);
-            
+
             return final.ToString();
         }
 

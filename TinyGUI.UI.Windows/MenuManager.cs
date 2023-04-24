@@ -30,17 +30,17 @@ namespace TinyGUI.UI.Windows
         {
             control.BackColor = Color.Transparent;
 
-            menuButtons.Add(new MenuButton(title, button, control)); 
+            menuButtons.Add(new MenuButton(title, button, control));
         }
 
-        public void AddForceLoad(string title) 
-        { 
-            forceLoadList.Add(title); 
+        public void AddForceLoad(string title)
+        {
+            forceLoadList.Add(title);
         }
 
-        public void SetDefaultMenu(string title) 
-        { 
-            defaultMenuTitle = title; 
+        public void SetDefaultMenu(string title)
+        {
+            defaultMenuTitle = title;
         }
 
         public void Register()
