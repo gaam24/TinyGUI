@@ -14,6 +14,7 @@ Simple program with visual interface to compress images using TinyJPG/TinyPNG.
 - Number of compressed images.
 - Number of requests made through the API.
 - Settings (with saving to json).
+- Supports jpg, png and webp image types.
 
 # Settings
 **API Keys** - List of API keys. Get the key on [TinyJPG](https://tinyjpg.com/developers).
