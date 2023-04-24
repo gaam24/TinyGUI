@@ -22,7 +22,7 @@ Simple program with visual interface to compress images using TinyJPG/TinyPNG.
 **Max Requests Per API** - Maximum number of requests per API. When you add your images it will split them evenly throught your API keys. If your API key is at it's limit (500 images default) it will not be used.
 
 **Compressed Path** - The path where compressed images are saved.
-- **Full Path** - All images will be saved in to this path.
+- **Full Path** - All images will be saved into this path.
 - **Single Folder** - It creates a folder in the path where the image is located and saves the compressed version there.
 
 **Compressed Name** - The style in which the compressed image will be saved. 
