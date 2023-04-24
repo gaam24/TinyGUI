@@ -7,11 +7,13 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
 
+		<VersionPrefix>1.1</VersionPrefix>
 		<AssemblyName>TinyGUI.UI.Windows</AssemblyName>
 		<AssemblyTitle>TinyGUI.UI.Windows</AssemblyTitle>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
 		<Authors>gam24</Authors>
 		<Copyright>Copyright © 2022</Copyright>
-		<VersionPrefix>1.0</VersionPrefix>
 
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
 		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
