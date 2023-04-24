@@ -16,7 +16,7 @@
             set => _compressedName = value;
         }
 
-        private int _compressingThreads = 10;
+        private int _compressingThreads;
         public int CompressingThreads
         {
             get => _compressingThreads;
