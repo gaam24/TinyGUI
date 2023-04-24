@@ -3,9 +3,9 @@
 Simple software with visual interface to compress images using [TinyJPG](https://tinyjpg.com/)/[TinyPNG](https://tinypng.com/) engine.
 
 <p align="middle">
-  <img src="https://i.imgur.com/vkR5DMI.png" width="410" align="middle"/>
-  <img src="https://i.imgur.com/oZHmw8O.png" width="410" align="middle"/>
-  <img src="https://i.imgur.com/bSrwVcn.png" width="410" align="middle"/>
+  <img src="https://i.imgur.com/UdwfLG9.png" width="410" align="middle"/>
+  <img src="https://i.imgur.com/dBG26Uj.png" width="410" align="middle"/>
+  <img src="https://i.imgur.com/MvOYOFs.png" width="410" align="middle"/>
 </p>
 
 # Features
