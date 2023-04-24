@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             pnlMenu = new Panel();
-            kbConsole = new Krypton.Toolkit.KryptonButton();
+            pnlMenuBottom = new Panel();
             kbSettings = new Krypton.Toolkit.KryptonButton();
+            kbConsole = new Krypton.Toolkit.KryptonButton();
             kbCompress = new Krypton.Toolkit.KryptonButton();
             kbDashboard = new Krypton.Toolkit.KryptonButton();
             pnlLogo = new Panel();
@@ -41,6 +42,7 @@
             lblTitle = new Label();
             kpForm = new Krypton.Toolkit.KryptonPanel();
             pnlMenu.SuspendLayout();
+            pnlMenuBottom.SuspendLayout();
             pnlLogo.SuspendLayout();
             pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kpForm).BeginInit();
@@ -49,8 +51,7 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(51, 51, 76);
-            pnlMenu.Controls.Add(kbConsole);
-            pnlMenu.Controls.Add(kbSettings);
+            pnlMenu.Controls.Add(pnlMenuBottom);
             pnlMenu.Controls.Add(kbCompress);
             pnlMenu.Controls.Add(kbDashboard);
             pnlMenu.Controls.Add(pnlLogo);
@@ -61,37 +62,21 @@
             pnlMenu.Size = new Size(220, 582);
             pnlMenu.TabIndex = 0;
             // 
-            // kbConsole
+            // pnlMenuBottom
             // 
-            kbConsole.CornerRoundingRadius = 8F;
-            kbConsole.Location = new Point(118, 502);
-            kbConsole.Margin = new Padding(15, 5, 15, 5);
-            kbConsole.Name = "kbConsole";
-            kbConsole.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
-            kbConsole.OverrideDefault.Border.Color1 = Color.FromArgb(76, 76, 114);
-            kbConsole.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbConsole.Size = new Size(87, 42);
-            kbConsole.StateCommon.Back.Color1 = Color.FromArgb(76, 76, 114);
-            kbConsole.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            kbConsole.StateCommon.Border.Color1 = Color.FromArgb(76, 76, 114);
-            kbConsole.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbConsole.StateCommon.Border.Rounding = 8F;
-            kbConsole.StateCommon.Content.ShortText.Color1 = Color.Gainsboro;
-            kbConsole.StateCommon.Content.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            kbConsole.StateCommon.Content.ShortText.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            kbConsole.StateDisabled.Back.Color1 = Color.FromArgb(42, 42, 63);
-            kbConsole.StateDisabled.Border.Color1 = Color.FromArgb(42, 42, 63);
-            kbConsole.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbConsole.StatePressed.Back.Color1 = Color.FromArgb(42, 42, 63);
-            kbConsole.StatePressed.Border.Color1 = Color.FromArgb(42, 42, 63);
-            kbConsole.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbConsole.TabIndex = 6;
-            kbConsole.Values.Text = "Console";
+            pnlMenuBottom.Controls.Add(kbSettings);
+            pnlMenuBottom.Controls.Add(kbConsole);
+            pnlMenuBottom.Dock = DockStyle.Bottom;
+            pnlMenuBottom.Location = new Point(0, 490);
+            pnlMenuBottom.Name = "pnlMenuBottom";
+            pnlMenuBottom.Size = new Size(220, 62);
+            pnlMenuBottom.TabIndex = 7;
             // 
             // kbSettings
             // 
+            kbSettings.Anchor = AnchorStyles.Bottom;
             kbSettings.CornerRoundingRadius = 8F;
-            kbSettings.Location = new Point(15, 502);
+            kbSettings.Location = new Point(15, 12);
             kbSettings.Margin = new Padding(15, 5, 15, 5);
             kbSettings.Name = "kbSettings";
             kbSettings.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
@@ -114,6 +99,34 @@
             kbSettings.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kbSettings.TabIndex = 6;
             kbSettings.Values.Text = "Settings";
+            // 
+            // kbConsole
+            // 
+            kbConsole.Anchor = AnchorStyles.Bottom;
+            kbConsole.CornerRoundingRadius = 8F;
+            kbConsole.Location = new Point(118, 12);
+            kbConsole.Margin = new Padding(15, 5, 15, 5);
+            kbConsole.Name = "kbConsole";
+            kbConsole.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
+            kbConsole.OverrideDefault.Border.Color1 = Color.FromArgb(76, 76, 114);
+            kbConsole.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbConsole.Size = new Size(87, 42);
+            kbConsole.StateCommon.Back.Color1 = Color.FromArgb(76, 76, 114);
+            kbConsole.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            kbConsole.StateCommon.Border.Color1 = Color.FromArgb(76, 76, 114);
+            kbConsole.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbConsole.StateCommon.Border.Rounding = 8F;
+            kbConsole.StateCommon.Content.ShortText.Color1 = Color.Gainsboro;
+            kbConsole.StateCommon.Content.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            kbConsole.StateCommon.Content.ShortText.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            kbConsole.StateDisabled.Back.Color1 = Color.FromArgb(42, 42, 63);
+            kbConsole.StateDisabled.Border.Color1 = Color.FromArgb(42, 42, 63);
+            kbConsole.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbConsole.StatePressed.Back.Color1 = Color.FromArgb(42, 42, 63);
+            kbConsole.StatePressed.Border.Color1 = Color.FromArgb(42, 42, 63);
+            kbConsole.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbConsole.TabIndex = 6;
+            kbConsole.Values.Text = "Console";
             // 
             // kbCompress
             // 
@@ -223,7 +236,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Roboto Medium", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.DeepSkyBlue;
-            lblTitle.Location = new Point(292, 25);
+            lblTitle.Location = new Point(182, 25);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(123, 28);
             lblTitle.TabIndex = 0;
@@ -259,6 +272,7 @@
             FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             pnlMenu.ResumeLayout(false);
+            pnlMenuBottom.ResumeLayout(false);
             pnlLogo.ResumeLayout(false);
             pnlTitleBar.ResumeLayout(false);
             pnlTitleBar.PerformLayout();
@@ -279,5 +293,6 @@
         private Krypton.Toolkit.KryptonButton kbConsole;
         private Krypton.Toolkit.KryptonButton kbSettings;
         private Krypton.Toolkit.KryptonButton kbCompress;
+        private Panel pnlMenuBottom;
     }
 }
