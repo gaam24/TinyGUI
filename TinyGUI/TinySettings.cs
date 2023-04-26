@@ -43,5 +43,9 @@
             get => _maxRequestsPerAPI;
             set => _maxRequestsPerAPI = value;
         }
+        internal TinySettings Clone()
+        {
+            return (TinySettings)MemberwiseClone();
+        }
     }
 }

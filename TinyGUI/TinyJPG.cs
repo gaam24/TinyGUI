@@ -49,16 +49,15 @@ namespace TinyGUI
                 Console.WriteLine(ex); //TODO: Change?
             }
         }
+        public async Task ParseApiKeysAsync(TinyAPIParser parser)
+        {
+            _apiKeys = await parser.ParseAPIKeysAsync(_settings.Clone()).ConfigureAwait(false);
+            _statistics.UpdateAPIKeys(_apiKeys);
+        }
 
         public async Task CompressAsync(TinyCompression compression)
         {
-            await compression.CompressAsync(_settings, _statistics, _apiKeys).ConfigureAwait(false);
-        }
-
-        public async Task ParseApiKeysAsync(TinyAPIParser parser)
-        {
-            _apiKeys = await parser.ParseApiKeysAsync(_settings).ConfigureAwait(false);
-            _statistics.UpdateAPIKeys(_apiKeys);
+            await compression.CompressListAsync(_settings.Clone(), _statistics, _apiKeys).ConfigureAwait(false);
         }
 
         public void ResetSettings()

@@ -18,7 +18,7 @@ namespace TinyGUI.Systems
             rawKeys = apiKeys;
         }
 
-        internal async Task<List<APIKey>> ParseApiKeysAsync(TinySettings settings)
+        internal async Task<List<APIKey>> ParseAPIKeysAsync(TinySettings settings)
         {
             var semaphore = new SemaphoreSlim(settings.APIParserThreads);
 

@@ -20,7 +20,7 @@ namespace TinyGUI.Systems
             this.filesPaths = new List<string>(filesPaths);
         }
 
-        internal async Task CompressAsync(TinySettings settings, TinyStatistics statistics, List<APIKey> apiKeys)
+        internal async Task CompressListAsync(TinySettings settings, TinyStatistics statistics, List<APIKey> apiKeys)
         {
             if (apiKeys.Count == 0 || filesPaths.Count == 0)
             {
