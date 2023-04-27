@@ -51,6 +51,7 @@ namespace TinyGUI.UI.Windows
             MenuButton? defaultMenu = menuButtons.FirstOrDefault(mb => mb.Title.Equals(defaultMenuTitle, StringComparison.Ordinal));
             menuButtons.ForEach(menuButton =>
             {
+                menuButton.Button.Text = menuButton.Title;
                 menuButton.Button.Click += (sender, e) => ButtonClickEvent(new MenuButtonClickEventArgs(menuButton));
 
                 if (forceLoadList.Contains(menuButton.Title))
