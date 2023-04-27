@@ -1,7 +1,9 @@
+using Krypton.Toolkit;
 using System.Diagnostics;
 using System.Globalization;
 using System.Timers;
 using TinyGUI.Events;
+using TinyGUI.UI.Windows.Data;
 using TinyGUI.UI.Windows.Forms;
 using Timer = System.Timers.Timer;
 
@@ -24,6 +26,7 @@ namespace TinyGUI.UI.Windows
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // Register Buttons
             RegisterButtons();
 
             // New Version
@@ -42,7 +45,8 @@ namespace TinyGUI.UI.Windows
             MenuManager formsManager = new(lblTitle, pnlTitleBar, kpForm);
 
             formsManager.AddButton("Dashboard", kbDashboard, new DashboardForm());
-            formsManager.AddButton("Compress", kbCompress, new CompressForm());
+            formsManager.AddButton("Images", kbImages, new ImagesForm());
+
             formsManager.AddButton("Console", kbConsole, new ConsoleForm());
             formsManager.AddButton("Settings", kbSettings, new SettingsForm());
 

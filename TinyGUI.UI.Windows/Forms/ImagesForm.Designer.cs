@@ -1,6 +1,6 @@
 ﻿namespace TinyGUI.UI.Windows.Forms
 {
-    partial class CompressForm
+    partial class ImagesForm
     {
         /// <summary> 
         /// Required designer variable.
@@ -41,7 +41,6 @@
             ktbFileDropTitle = new Krypton.Toolkit.KryptonTextBox();
             klbFileDrop = new Krypton.Toolkit.KryptonListBox();
             kpInfo = new Krypton.Toolkit.KryptonPanel();
-            ktbInfoTitle = new Krypton.Toolkit.KryptonTextBox();
             krtbInfo = new Krypton.Toolkit.KryptonRichTextBox();
             kpbCompressProgress = new Krypton.Toolkit.KryptonProgressBar();
             kpCompress = new Krypton.Toolkit.KryptonPanel();
@@ -65,9 +64,10 @@
             pnlInfoSpaceSaved.BackColor = Color.FromArgb(47, 47, 71);
             pnlInfoSpaceSaved.Controls.Add(lblInfoSpaceSaved);
             pnlInfoSpaceSaved.Controls.Add(lblInfoSpaceSavedTitle);
-            pnlInfoSpaceSaved.Location = new Point(9, 182);
+            pnlInfoSpaceSaved.Location = new Point(328, 10);
+            pnlInfoSpaceSaved.Margin = new Padding(3, 10, 10, 10);
             pnlInfoSpaceSaved.Name = "pnlInfoSpaceSaved";
-            pnlInfoSpaceSaved.Size = new Size(206, 54);
+            pnlInfoSpaceSaved.Size = new Size(106, 54);
             pnlInfoSpaceSaved.TabIndex = 8;
             // 
             // lblInfoSpaceSaved
@@ -78,10 +78,10 @@
             lblInfoSpaceSaved.Location = new Point(3, 28);
             lblInfoSpaceSaved.Margin = new Padding(3);
             lblInfoSpaceSaved.Name = "lblInfoSpaceSaved";
-            lblInfoSpaceSaved.Size = new Size(200, 26);
+            lblInfoSpaceSaved.Size = new Size(100, 21);
             lblInfoSpaceSaved.TabIndex = 0;
-            lblInfoSpaceSaved.Text = "Saved: {spaceSaved}";
-            lblInfoSpaceSaved.TextAlign = ContentAlignment.MiddleLeft;
+            lblInfoSpaceSaved.Text = "{spaceSaved}";
+            lblInfoSpaceSaved.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblInfoSpaceSavedTitle
             // 
@@ -92,7 +92,7 @@
             lblInfoSpaceSavedTitle.Location = new Point(3, 2);
             lblInfoSpaceSavedTitle.Margin = new Padding(3);
             lblInfoSpaceSavedTitle.Name = "lblInfoSpaceSavedTitle";
-            lblInfoSpaceSavedTitle.Size = new Size(200, 23);
+            lblInfoSpaceSavedTitle.Size = new Size(100, 23);
             lblInfoSpaceSavedTitle.TabIndex = 7;
             lblInfoSpaceSavedTitle.Text = "Saved Space";
             lblInfoSpaceSavedTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -102,10 +102,10 @@
             pnlInfoOptimized.BackColor = Color.FromArgb(47, 47, 71);
             pnlInfoOptimized.Controls.Add(lblInfoOptimized);
             pnlInfoOptimized.Controls.Add(lblInfoOptimizedTitle);
-            pnlInfoOptimized.Location = new Point(9, 108);
-            pnlInfoOptimized.Margin = new Padding(3, 3, 3, 0);
+            pnlInfoOptimized.Location = new Point(166, 10);
+            pnlInfoOptimized.Margin = new Padding(3, 10, 3, 10);
             pnlInfoOptimized.Name = "pnlInfoOptimized";
-            pnlInfoOptimized.Size = new Size(206, 68);
+            pnlInfoOptimized.Size = new Size(159, 54);
             pnlInfoOptimized.TabIndex = 8;
             // 
             // lblInfoOptimized
@@ -116,10 +116,10 @@
             lblInfoOptimized.Location = new Point(3, 28);
             lblInfoOptimized.Margin = new Padding(3);
             lblInfoOptimized.Name = "lblInfoOptimized";
-            lblInfoOptimized.Size = new Size(200, 40);
+            lblInfoOptimized.Size = new Size(153, 21);
             lblInfoOptimized.TabIndex = 0;
-            lblInfoOptimized.Text = "Files: {optimizedCount}\r\nSize: {optimizedSize}";
-            lblInfoOptimized.TextAlign = ContentAlignment.MiddleLeft;
+            lblInfoOptimized.Text = "{optimizedCount} [{optimizedSize}]";
+            lblInfoOptimized.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblInfoOptimizedTitle
             // 
@@ -130,7 +130,7 @@
             lblInfoOptimizedTitle.Location = new Point(3, 2);
             lblInfoOptimizedTitle.Margin = new Padding(3);
             lblInfoOptimizedTitle.Name = "lblInfoOptimizedTitle";
-            lblInfoOptimizedTitle.Size = new Size(200, 23);
+            lblInfoOptimizedTitle.Size = new Size(153, 23);
             lblInfoOptimizedTitle.TabIndex = 7;
             lblInfoOptimizedTitle.Text = "Optimized";
             lblInfoOptimizedTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -140,10 +140,10 @@
             pnlInfoFiles.BackColor = Color.FromArgb(47, 47, 71);
             pnlInfoFiles.Controls.Add(lblInfoFiles);
             pnlInfoFiles.Controls.Add(lblInfoFilesTitle);
-            pnlInfoFiles.Location = new Point(9, 34);
-            pnlInfoFiles.Margin = new Padding(3, 3, 3, 0);
+            pnlInfoFiles.Location = new Point(10, 10);
+            pnlInfoFiles.Margin = new Padding(10, 10, 3, 10);
             pnlInfoFiles.Name = "pnlInfoFiles";
-            pnlInfoFiles.Size = new Size(206, 68);
+            pnlInfoFiles.Size = new Size(153, 54);
             pnlInfoFiles.TabIndex = 8;
             // 
             // lblInfoFiles
@@ -154,10 +154,10 @@
             lblInfoFiles.Location = new Point(3, 28);
             lblInfoFiles.Margin = new Padding(3);
             lblInfoFiles.Name = "lblInfoFiles";
-            lblInfoFiles.Size = new Size(200, 40);
+            lblInfoFiles.Size = new Size(147, 21);
             lblInfoFiles.TabIndex = 0;
-            lblInfoFiles.Text = "Files: {filesCount}\r\nSize: {filesSize}";
-            lblInfoFiles.TextAlign = ContentAlignment.MiddleLeft;
+            lblInfoFiles.Text = "{filesCount} [{filesSize}]";
+            lblInfoFiles.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblInfoFilesTitle
             // 
@@ -168,7 +168,7 @@
             lblInfoFilesTitle.Location = new Point(3, 3);
             lblInfoFilesTitle.Margin = new Padding(3);
             lblInfoFilesTitle.Name = "lblInfoFilesTitle";
-            lblInfoFilesTitle.Size = new Size(200, 23);
+            lblInfoFilesTitle.Size = new Size(147, 23);
             lblInfoFilesTitle.TabIndex = 7;
             lblInfoFilesTitle.Text = "Files";
             lblInfoFilesTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -178,9 +178,9 @@
             kpFileDrop.Controls.Add(ktbFileDropTitle);
             kpFileDrop.Controls.Add(klbFileDrop);
             kpFileDrop.Location = new Point(15, 15);
-            kpFileDrop.Margin = new Padding(15);
+            kpFileDrop.Margin = new Padding(15, 15, 15, 0);
             kpFileDrop.Name = "kpFileDrop";
-            kpFileDrop.Size = new Size(443, 469);
+            kpFileDrop.Size = new Size(444, 403);
             kpFileDrop.StateCommon.Draw = Krypton.Toolkit.InheritBool.True;
             kpFileDrop.TabIndex = 12;
             // 
@@ -191,7 +191,7 @@
             ktbFileDropTitle.Margin = new Padding(3, 3, 3, 0);
             ktbFileDropTitle.Name = "ktbFileDropTitle";
             ktbFileDropTitle.ReadOnly = true;
-            ktbFileDropTitle.Size = new Size(57, 28);
+            ktbFileDropTitle.Size = new Size(65, 28);
             ktbFileDropTitle.StateCommon.Back.Color1 = Color.FromArgb(38, 38, 57);
             ktbFileDropTitle.StateCommon.Border.Color1 = Color.FromArgb(38, 38, 57);
             ktbFileDropTitle.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -199,7 +199,7 @@
             ktbFileDropTitle.StateCommon.Content.Color1 = Color.FromArgb(239, 247, 255);
             ktbFileDropTitle.StateCommon.Content.Font = new Font("Roboto Medium", 10F, FontStyle.Regular, GraphicsUnit.Point);
             ktbFileDropTitle.TabIndex = 13;
-            ktbFileDropTitle.Text = "Files";
+            ktbFileDropTitle.Text = "Images";
             ktbFileDropTitle.TextAlign = HorizontalAlignment.Center;
             ktbFileDropTitle.WordWrap = false;
             // 
@@ -212,7 +212,7 @@
             klbFileDrop.Margin = new Padding(3, 0, 3, 3);
             klbFileDrop.Name = "klbFileDrop";
             klbFileDrop.SelectionMode = SelectionMode.MultiExtended;
-            klbFileDrop.Size = new Size(437, 435);
+            klbFileDrop.Size = new Size(438, 369);
             klbFileDrop.StateCommon.Back.Color1 = Color.FromArgb(54, 54, 81);
             klbFileDrop.StateCommon.Border.Color1 = Color.FromArgb(54, 54, 81);
             klbFileDrop.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -222,44 +222,24 @@
             // 
             // kpInfo
             // 
-            kpInfo.Controls.Add(pnlInfoFiles);
             kpInfo.Controls.Add(pnlInfoSpaceSaved);
-            kpInfo.Controls.Add(ktbInfoTitle);
+            kpInfo.Controls.Add(pnlInfoFiles);
             kpInfo.Controls.Add(pnlInfoOptimized);
             kpInfo.Controls.Add(krtbInfo);
-            kpInfo.Location = new Point(476, 68);
-            kpInfo.Margin = new Padding(0, 50, 15, 3);
+            kpInfo.Location = new Point(15, 423);
+            kpInfo.Margin = new Padding(0, 5, 15, 5);
             kpInfo.Name = "kpInfo";
-            kpInfo.Size = new Size(224, 255);
+            kpInfo.Size = new Size(444, 74);
             kpInfo.TabIndex = 14;
-            // 
-            // ktbInfoTitle
-            // 
-            ktbInfoTitle.Enabled = false;
-            ktbInfoTitle.Location = new Point(18, 3);
-            ktbInfoTitle.Margin = new Padding(3, 3, 3, 0);
-            ktbInfoTitle.Name = "ktbInfoTitle";
-            ktbInfoTitle.ReadOnly = true;
-            ktbInfoTitle.Size = new Size(111, 28);
-            ktbInfoTitle.StateCommon.Back.Color1 = Color.FromArgb(38, 38, 57);
-            ktbInfoTitle.StateCommon.Border.Color1 = Color.FromArgb(38, 38, 57);
-            ktbInfoTitle.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            ktbInfoTitle.StateCommon.Border.Rounding = 8F;
-            ktbInfoTitle.StateCommon.Content.Color1 = Color.FromArgb(239, 247, 255);
-            ktbInfoTitle.StateCommon.Content.Font = new Font("Roboto Medium", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            ktbInfoTitle.TabIndex = 13;
-            ktbInfoTitle.Text = "Informations";
-            ktbInfoTitle.TextAlign = HorizontalAlignment.Center;
-            ktbInfoTitle.WordWrap = false;
             // 
             // krtbInfo
             // 
+            krtbInfo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             krtbInfo.Enabled = false;
-            krtbInfo.Location = new Point(3, 31);
-            krtbInfo.Margin = new Padding(3, 0, 3, 3);
+            krtbInfo.Location = new Point(3, 3);
             krtbInfo.Name = "krtbInfo";
             krtbInfo.ReadOnly = true;
-            krtbInfo.Size = new Size(218, 217);
+            krtbInfo.Size = new Size(441, 68);
             krtbInfo.StateCommon.Back.Color1 = Color.FromArgb(47, 47, 71);
             krtbInfo.StateCommon.Border.Color1 = Color.FromArgb(47, 47, 71);
             krtbInfo.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -354,14 +334,14 @@
             krtbCompress.TabIndex = 14;
             krtbCompress.Text = "";
             // 
-            // CompressForm
+            // ImageCompressForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(kpCompress);
             Controls.Add(kpInfo);
             Controls.Add(kpFileDrop);
-            Name = "CompressForm";
+            Name = "ImageCompressForm";
             Size = new Size(715, 502);
             Load += CompressForm_Load;
             pnlInfoSpaceSaved.ResumeLayout(false);
@@ -372,7 +352,6 @@
             kpFileDrop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kpInfo).EndInit();
             kpInfo.ResumeLayout(false);
-            kpInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kpCompress).EndInit();
             kpCompress.ResumeLayout(false);
             kpCompress.PerformLayout();
@@ -394,7 +373,6 @@
         private Krypton.Toolkit.KryptonListBox klbFileDrop;
         private Krypton.Toolkit.KryptonTextBox ktbFileDropTitle;
         private Krypton.Toolkit.KryptonPanel kpInfo;
-        private Krypton.Toolkit.KryptonTextBox ktbInfoTitle;
         private Krypton.Toolkit.KryptonRichTextBox krtbInfo;
         private Krypton.Toolkit.KryptonProgressBar kpbCompressProgress;
         private Krypton.Toolkit.KryptonPanel kpCompress;

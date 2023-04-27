@@ -7,9 +7,10 @@ using TinyGUI.UI.Windows.Utils;
 
 //TODO: Add support to multiple file names (in other directory)
 //TODO: Display if api count is empty?
+//TODO: Cancel button
 namespace TinyGUI.UI.Windows.Forms
 {
-    public partial class CompressForm : UserControl
+    public partial class ImagesForm : UserControl
     {
         private readonly TinyCompression compression = new();
         private readonly List<string> pathsList = new();
@@ -21,7 +22,7 @@ namespace TinyGUI.UI.Windows.Forms
         private readonly string defaultInfoSpaceSavedText;
         private readonly string defaultCompressInfoText;
 
-        public CompressForm()
+        public ImagesForm()
         {
             InitializeComponent();
 

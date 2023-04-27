@@ -33,7 +33,7 @@
             pnlMenuBottom = new Panel();
             kbSettings = new Krypton.Toolkit.KryptonButton();
             kbConsole = new Krypton.Toolkit.KryptonButton();
-            kbCompress = new Krypton.Toolkit.KryptonButton();
+            kbImages = new Krypton.Toolkit.KryptonButton();
             kbDashboard = new Krypton.Toolkit.KryptonButton();
             pnlLogo = new Panel();
             lblLogo = new Label();
@@ -52,7 +52,7 @@
             // 
             pnlMenu.BackColor = Color.FromArgb(51, 51, 76);
             pnlMenu.Controls.Add(pnlMenuBottom);
-            pnlMenu.Controls.Add(kbCompress);
+            pnlMenu.Controls.Add(kbImages);
             pnlMenu.Controls.Add(kbDashboard);
             pnlMenu.Controls.Add(pnlLogo);
             pnlMenu.Controls.Add(btnNewVersion);
@@ -128,38 +128,38 @@
             kbConsole.TabIndex = 6;
             kbConsole.Values.Text = "Console";
             // 
-            // kbCompress
+            // kbImages
             // 
-            kbCompress.CornerRoundingRadius = 8F;
-            kbCompress.Location = new Point(15, 150);
-            kbCompress.Margin = new Padding(15, 5, 15, 5);
-            kbCompress.Name = "kbCompress";
-            kbCompress.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
-            kbCompress.OverrideDefault.Border.Color1 = Color.FromArgb(76, 76, 114);
-            kbCompress.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbCompress.Size = new Size(190, 42);
-            kbCompress.StateCommon.Back.Color1 = Color.FromArgb(76, 76, 114);
-            kbCompress.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            kbCompress.StateCommon.Border.Color1 = Color.FromArgb(76, 76, 114);
-            kbCompress.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbCompress.StateCommon.Border.Rounding = 8F;
-            kbCompress.StateCommon.Content.ShortText.Color1 = Color.Gainsboro;
-            kbCompress.StateCommon.Content.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            kbCompress.StateCommon.Content.ShortText.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            kbCompress.StateDisabled.Back.Color1 = Color.FromArgb(42, 42, 63);
-            kbCompress.StateDisabled.Border.Color1 = Color.FromArgb(42, 42, 63);
-            kbCompress.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbCompress.StatePressed.Back.Color1 = Color.FromArgb(42, 42, 63);
-            kbCompress.StatePressed.Border.Color1 = Color.FromArgb(42, 42, 63);
-            kbCompress.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kbCompress.TabIndex = 6;
-            kbCompress.Values.Text = "Compress";
+            kbImages.CornerRoundingRadius = 8F;
+            kbImages.Location = new Point(15, 145);
+            kbImages.Margin = new Padding(15, 5, 15, 0);
+            kbImages.Name = "kbImages";
+            kbImages.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
+            kbImages.OverrideDefault.Border.Color1 = Color.FromArgb(76, 76, 114);
+            kbImages.OverrideDefault.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbImages.Size = new Size(190, 42);
+            kbImages.StateCommon.Back.Color1 = Color.FromArgb(76, 76, 114);
+            kbImages.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            kbImages.StateCommon.Border.Color1 = Color.FromArgb(76, 76, 114);
+            kbImages.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbImages.StateCommon.Border.Rounding = 8F;
+            kbImages.StateCommon.Content.ShortText.Color1 = Color.Gainsboro;
+            kbImages.StateCommon.Content.ShortText.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            kbImages.StateCommon.Content.ShortText.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            kbImages.StateDisabled.Back.Color1 = Color.FromArgb(42, 42, 63);
+            kbImages.StateDisabled.Border.Color1 = Color.FromArgb(42, 42, 63);
+            kbImages.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbImages.StatePressed.Back.Color1 = Color.FromArgb(42, 42, 63);
+            kbImages.StatePressed.Border.Color1 = Color.FromArgb(42, 42, 63);
+            kbImages.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kbImages.TabIndex = 6;
+            kbImages.Values.Text = "Images";
             // 
             // kbDashboard
             // 
             kbDashboard.CornerRoundingRadius = 8F;
             kbDashboard.Location = new Point(15, 98);
-            kbDashboard.Margin = new Padding(15, 15, 15, 5);
+            kbDashboard.Margin = new Padding(15, 15, 15, 0);
             kbDashboard.Name = "kbDashboard";
             kbDashboard.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
             kbDashboard.OverrideDefault.Border.Color1 = Color.FromArgb(76, 76, 114);
@@ -236,7 +236,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Roboto Medium", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.DeepSkyBlue;
-            lblTitle.Location = new Point(182, 25);
+            lblTitle.Location = new Point(6, 27);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(123, 28);
             lblTitle.TabIndex = 0;
@@ -292,7 +292,7 @@
         private Krypton.Toolkit.KryptonButton kbDashboard;
         private Krypton.Toolkit.KryptonButton kbConsole;
         private Krypton.Toolkit.KryptonButton kbSettings;
-        private Krypton.Toolkit.KryptonButton kbCompress;
         private Panel pnlMenuBottom;
+        private Krypton.Toolkit.KryptonButton kbImages;
     }
 }
