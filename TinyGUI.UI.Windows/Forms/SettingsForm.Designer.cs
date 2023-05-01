@@ -365,7 +365,6 @@
             Controls.Add(kpAPI);
             Name = "SettingsForm";
             Size = new Size(715, 502);
-            Load += SettingsForm_Load;
             ((System.ComponentModel.ISupportInitialize)kpAPI).EndInit();
             kpAPI.ResumeLayout(false);
             kpAPI.PerformLayout();

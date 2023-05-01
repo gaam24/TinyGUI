@@ -18,6 +18,9 @@ namespace TinyGUI.UI.Windows.Forms
         {
             InitializeComponent();
 
+            Load += SettingsForm_Load;
+            VisibleChanged += SettingsForm_VisibleChanged;
+
             // API Keys Events
             ktbAPIKeys.Enter += APIKeys_Enter;
             ktbAPIKeys.Leave += APIKeys_LeaveAsync;
@@ -25,24 +28,17 @@ namespace TinyGUI.UI.Windows.Forms
             // API Parser Threads Events
             FormsUtils.OnlyNumbers(ktbAPIParserThreads);
             FormsUtils.Range(ktbAPIParserThreads, 0, 1000);
-            ktbAPIParserThreads.TextChanged += APIParserThreads_TextChanged;
 
             // API Max Requests
             FormsUtils.OnlyNumbers(ktbMaxRequestsPerAPI);
             FormsUtils.Range(ktbMaxRequestsPerAPI, 0, int.MaxValue);
-            ktbMaxRequestsPerAPI.TextChanged += MaxRequestsPerAPI_TextChanged;
 
             // Compress Path Events
-            ktbCompressPath.TextChanged += CompressedPath_TextChanged;
             kbCompressPathSearch.Click += CompressedPathSearch_Click;
-
-            // Compress Name Events
-            ktbCompressName.TextChanged += CompressedName_TextChanged;
 
             // Compress Threads
             FormsUtils.OnlyNumbers(ktbCompressingThreads);
             FormsUtils.Range(ktbCompressingThreads, 0, 1000);
-            ktbCompressingThreads.TextChanged += CompressingThreads_TextChanged;
 
             // Reset Button Event
             kbReset.Click += ResetButton_Click;
@@ -52,13 +48,21 @@ namespace TinyGUI.UI.Windows.Forms
             parser.LoadingEnded += ParserAPIEndedHandler;
         }
 
-        private void SettingsForm_Load(object sender, EventArgs e)
+        private void SettingsForm_Load(object? sender, EventArgs e)
         {
             // Disable backgrounds
             kpAPI.StateCommon.Draw = InheritBool.False;
             kpCompress.StateCommon.Draw = InheritBool.False;
 
             LoadSettings();
+        }
+
+        private void SettingsForm_VisibleChanged(object? sender, EventArgs e)
+        {
+            if (Visible == false)
+            {
+                SaveSettings();
+            }
         }
 
         private void LoadSettings()
@@ -82,18 +86,9 @@ namespace TinyGUI.UI.Windows.Forms
             HideAPIKeys();
         }
 
-        /*
-         * API Keys Events
-         */
-        private void APIKeys_Enter(object? sender, EventArgs e)
+        private async void SaveSettings()
         {
-            ShowAPIKeys();
-        }
-
-        private async void APIKeys_LeaveAsync(object? sender, EventArgs e)
-        {
-            HideAPIKeys();
-
+            // Save API Keys
             var list = ListUtils.StringToList(realApiKeys);
             if (ListUtils.IsDifferent(Program.TinyJPG.Settings.APIKeys, list))
             {
@@ -107,13 +102,8 @@ namespace TinyGUI.UI.Windows.Forms
                     Console.WriteLine(ex.Message);
                 }
             }
-        }
 
-        /*
-         * API Max Requests
-         */
-        private void MaxRequestsPerAPI_TextChanged(object? sender, EventArgs e)
-        {
+            // Save Max Requests Per API
             try
             {
                 int num = int.Parse(ktbMaxRequestsPerAPI.Text, CultureInfo.InvariantCulture);
@@ -123,13 +113,8 @@ namespace TinyGUI.UI.Windows.Forms
             {
                 Console.WriteLine($"[MaxRequestsPerAPI] {ex.Message}");
             }
-        }
 
-        /*
-         * API Threads Events
-         */
-        private void APIParserThreads_TextChanged(object? sender, EventArgs e)
-        {
+            // Save API Parser Threads
             try
             {
                 int num = int.Parse(ktbAPIParserThreads.Text, CultureInfo.InvariantCulture);
@@ -139,41 +124,14 @@ namespace TinyGUI.UI.Windows.Forms
             {
                 Console.WriteLine($"[APIParserThreads] {ex.Message}");
             }
-        }
 
-        /*
-         * Compressed Path Events
-         */
-        private void CompressedPath_TextChanged(object? sender, EventArgs e)
-        {
-            if (!cbCompressPathDontSave.Checked)
-            {
-                Program.TinyJPG.Settings.CompressedPath = ktbCompressPath.Text;
-            }
-        }
+            // Save Compressed Path
+            Program.TinyJPG.Settings.CompressedPath = ktbCompressPath.Text;
 
-        private void CompressedPathSearch_Click(object? sender, EventArgs e)
-        {
-            using FolderBrowserDialog fileDialog = new();
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                ktbCompressPath.Text = fileDialog.SelectedPath;
-            }
-        }
-
-        /*
-         * Compressed Name Events
-         */
-        private void CompressedName_TextChanged(object? sender, EventArgs e)
-        {
+            // Save Compressed Name
             Program.TinyJPG.Settings.CompressedName = ktbCompressName.Text;
-        }
 
-        /*
-         * Compressing Threads Events
-         */
-        private void CompressingThreads_TextChanged(object? sender, EventArgs e)
-        {
+            // Save Compressing Threads
             try
             {
                 int num = int.Parse(ktbCompressingThreads.Text, CultureInfo.InvariantCulture);
@@ -182,6 +140,31 @@ namespace TinyGUI.UI.Windows.Forms
             catch (Exception ex)
             {
                 Console.WriteLine($"[CompressingThreads] {ex.Message}");
+            }
+        }
+
+        /*
+         * API Keys Events
+         */
+        private void APIKeys_Enter(object? sender, EventArgs e)
+        {
+            ShowAPIKeys();
+        }
+
+        private void APIKeys_LeaveAsync(object? sender, EventArgs e)
+        {
+            HideAPIKeys();
+        }
+
+        /*
+         * Compressed Path Events
+         */
+        private void CompressedPathSearch_Click(object? sender, EventArgs e)
+        {
+            using FolderBrowserDialog fileDialog = new();
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ktbCompressPath.Text = fileDialog.SelectedPath;
             }
         }
 
