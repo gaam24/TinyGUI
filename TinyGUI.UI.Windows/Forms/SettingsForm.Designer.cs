@@ -195,6 +195,7 @@
             // 
             cbCompressPathDontSave.AutoSize = true;
             cbCompressPathDontSave.BackColor = Color.FromArgb(47, 47, 71);
+            cbCompressPathDontSave.Enabled = false;
             cbCompressPathDontSave.ForeColor = Color.FromArgb(239, 247, 255);
             cbCompressPathDontSave.Location = new Point(114, 67);
             cbCompressPathDontSave.Name = "cbCompressPathDontSave";
