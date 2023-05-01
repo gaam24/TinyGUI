@@ -4,7 +4,6 @@ using TinyGUI.Events;
 using TinyGUI.Systems;
 using TinyGUI.UI.Windows.Utils;
 
-// TODO: Block settings changes when run action (e.g Compressing)
 namespace TinyGUI.UI.Windows.Forms
 {
     public partial class SettingsForm : UserControl
