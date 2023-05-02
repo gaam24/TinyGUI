@@ -34,10 +34,12 @@
             kpCompressedImages = new Krypton.Toolkit.KryptonPanel();
             ktbCompressedImagesTitle = new Krypton.Toolkit.KryptonTextBox();
             klbCompressedImages = new Krypton.Toolkit.KryptonListBox();
+            kpBackground = new Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)kpCompressedCount).BeginInit();
             kpCompressedCount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kpCompressedImages).BeginInit();
             kpCompressedImages.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kpBackground).BeginInit();
             SuspendLayout();
             // 
             // klbCompressedCount
@@ -137,12 +139,26 @@
             klbCompressedImages.StateTracking.Item.Back.Draw = Krypton.Toolkit.InheritBool.False;
             klbCompressedImages.TabIndex = 1;
             // 
+            // kpBackground
+            // 
+            kpBackground.Dock = DockStyle.Fill;
+            kpBackground.Location = new Point(0, 0);
+            kpBackground.Margin = new Padding(0);
+            kpBackground.Name = "kpBackground";
+            kpBackground.Size = new Size(715, 502);
+            kpBackground.StateCommon.Color1 = Color.FromArgb(76, 76, 114);
+            kpBackground.StateCommon.Color2 = Color.FromArgb(90, 81, 121);
+            kpBackground.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear33;
+            kpBackground.StateCommon.Draw = Krypton.Toolkit.InheritBool.False;
+            kpBackground.TabIndex = 9;
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(kpCompressedImages);
             Controls.Add(kpCompressedCount);
+            Controls.Add(kpBackground);
             Name = "DashboardForm";
             Size = new Size(715, 502);
             Load += DashboardForm_Load;
@@ -152,6 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)kpCompressedImages).EndInit();
             kpCompressedImages.ResumeLayout(false);
             kpCompressedImages.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kpBackground).EndInit();
             ResumeLayout(false);
         }
 
@@ -162,5 +179,6 @@
         private Krypton.Toolkit.KryptonPanel kpCompressedImages;
         private Krypton.Toolkit.KryptonTextBox ktbCompressedImagesTitle;
         private Krypton.Toolkit.KryptonListBox klbCompressedImages;
+        private Krypton.Toolkit.KryptonPanel kpBackground;
     }
 }

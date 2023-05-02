@@ -48,6 +48,7 @@
             kbCompressRun = new Krypton.Toolkit.KryptonButton();
             ktnCompressTitle = new Krypton.Toolkit.KryptonTextBox();
             krtbCompress = new Krypton.Toolkit.KryptonRichTextBox();
+            kpBackground = new Krypton.Toolkit.KryptonPanel();
             pnlInfoSpaceSaved.SuspendLayout();
             pnlInfoOptimized.SuspendLayout();
             pnlInfoFiles.SuspendLayout();
@@ -57,6 +58,7 @@
             kpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kpCompress).BeginInit();
             kpCompress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kpBackground).BeginInit();
             SuspendLayout();
             // 
             // pnlInfoSpaceSaved
@@ -334,14 +336,28 @@
             krtbCompress.TabIndex = 14;
             krtbCompress.Text = "";
             // 
-            // ImageCompressForm
+            // kpBackground
+            // 
+            kpBackground.Dock = DockStyle.Fill;
+            kpBackground.Location = new Point(0, 0);
+            kpBackground.Margin = new Padding(0);
+            kpBackground.Name = "kpBackground";
+            kpBackground.Size = new Size(715, 502);
+            kpBackground.StateCommon.Color1 = Color.FromArgb(76, 76, 114);
+            kpBackground.StateCommon.Color2 = Color.FromArgb(90, 81, 121);
+            kpBackground.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear33;
+            kpBackground.StateCommon.Draw = Krypton.Toolkit.InheritBool.False;
+            kpBackground.TabIndex = 17;
+            // 
+            // ImagesForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(kpCompress);
             Controls.Add(kpInfo);
             Controls.Add(kpFileDrop);
-            Name = "ImageCompressForm";
+            Controls.Add(kpBackground);
+            Name = "ImagesForm";
             Size = new Size(715, 502);
             Load += CompressForm_Load;
             pnlInfoSpaceSaved.ResumeLayout(false);
@@ -355,6 +371,7 @@
             ((System.ComponentModel.ISupportInitialize)kpCompress).EndInit();
             kpCompress.ResumeLayout(false);
             kpCompress.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kpBackground).EndInit();
             ResumeLayout(false);
         }
 
@@ -380,5 +397,6 @@
         private Krypton.Toolkit.KryptonRichTextBox krtbCompress;
         private Krypton.Toolkit.KryptonButton kbCompressRun;
         private Label lblCompressInfo;
+        private Krypton.Toolkit.KryptonPanel kpBackground;
     }
 }

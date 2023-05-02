@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             consoleBox = new Krypton.Toolkit.KryptonListBox();
+            kpBackground = new Krypton.Toolkit.KryptonPanel();
+            ((System.ComponentModel.ISupportInitialize)kpBackground).BeginInit();
             SuspendLayout();
             // 
             // consoleBox
@@ -68,18 +70,35 @@
             consoleBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             consoleBox.TabIndex = 2;
             // 
+            // kpBackground
+            // 
+            kpBackground.Dock = DockStyle.Fill;
+            kpBackground.Location = new Point(0, 0);
+            kpBackground.Margin = new Padding(0);
+            kpBackground.Name = "kpBackground";
+            kpBackground.Size = new Size(715, 502);
+            kpBackground.StateCommon.Color1 = Color.FromArgb(76, 76, 114);
+            kpBackground.StateCommon.Color2 = Color.FromArgb(90, 81, 121);
+            kpBackground.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear33;
+            kpBackground.StateCommon.Draw = Krypton.Toolkit.InheritBool.False;
+            kpBackground.TabIndex = 3;
+            // 
             // ConsoleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(consoleBox);
+            Controls.Add(kpBackground);
+            Margin = new Padding(0);
             Name = "ConsoleForm";
             Size = new Size(715, 502);
             Load += ConsoleForm_Load;
+            ((System.ComponentModel.ISupportInitialize)kpBackground).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Krypton.Toolkit.KryptonListBox consoleBox;
+        private Krypton.Toolkit.KryptonPanel kpBackground;
     }
 }

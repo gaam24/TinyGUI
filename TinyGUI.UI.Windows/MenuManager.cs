@@ -61,7 +61,6 @@ namespace TinyGUI.UI.Windows
 
             // Set title
             titleLabel.Text = menuButton.Title.ToUpper(CultureInfo.InvariantCulture);
-            titleLabel.Location = new Point(titlePanel.Width / 2 - titleLabel.Width / 2, titlePanel.Height / 2 - titleLabel.Height / 2);
 
             // Disable button and enable previous.
             button.Enabled = false;

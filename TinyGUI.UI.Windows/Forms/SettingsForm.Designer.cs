@@ -46,10 +46,12 @@
             ktbCompressPath = new Krypton.Toolkit.KryptonTextBox();
             krtbCompressPath = new Krypton.Toolkit.KryptonRichTextBox();
             kbReset = new Krypton.Toolkit.KryptonButton();
+            kpBackground = new Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)kpAPI).BeginInit();
             kpAPI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kpCompress).BeginInit();
             kpCompress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kpBackground).BeginInit();
             SuspendLayout();
             // 
             // kpAPI
@@ -356,6 +358,19 @@
             kbReset.TabIndex = 14;
             kbReset.Values.Text = "Reset (without API Keys)";
             // 
+            // kpBackground
+            // 
+            kpBackground.Dock = DockStyle.Fill;
+            kpBackground.Location = new Point(0, 0);
+            kpBackground.Margin = new Padding(0);
+            kpBackground.Name = "kpBackground";
+            kpBackground.Size = new Size(715, 502);
+            kpBackground.StateCommon.Color1 = Color.FromArgb(76, 76, 114);
+            kpBackground.StateCommon.Color2 = Color.FromArgb(90, 81, 121);
+            kpBackground.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear33;
+            kpBackground.StateCommon.Draw = Krypton.Toolkit.InheritBool.False;
+            kpBackground.TabIndex = 15;
+            // 
             // SettingsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -363,6 +378,7 @@
             Controls.Add(kpCompress);
             Controls.Add(kbReset);
             Controls.Add(kpAPI);
+            Controls.Add(kpBackground);
             Name = "SettingsForm";
             Size = new Size(715, 502);
             ((System.ComponentModel.ISupportInitialize)kpAPI).EndInit();
@@ -371,6 +387,7 @@
             ((System.ComponentModel.ISupportInitialize)kpCompress).EndInit();
             kpCompress.ResumeLayout(false);
             kpCompress.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kpBackground).EndInit();
             ResumeLayout(false);
         }
 
@@ -393,5 +410,6 @@
         private Krypton.Toolkit.KryptonButton kbReset;
         private Krypton.Toolkit.KryptonTextBox ktbCompressingThreads;
         private Krypton.Toolkit.KryptonTextBox ktbCompressingThreadsTitle;
+        private Krypton.Toolkit.KryptonPanel kpBackground;
     }
 }

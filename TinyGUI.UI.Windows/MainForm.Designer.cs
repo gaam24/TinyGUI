@@ -64,6 +64,7 @@
             // 
             // pnlMenuBottom
             // 
+            pnlMenuBottom.BackColor = Color.FromArgb(0, 0, 0, 0);
             pnlMenuBottom.Controls.Add(kbSettings);
             pnlMenuBottom.Controls.Add(kbConsole);
             pnlMenuBottom.Dock = DockStyle.Bottom;
@@ -131,7 +132,7 @@
             // kbImages
             // 
             kbImages.CornerRoundingRadius = 8F;
-            kbImages.Location = new Point(15, 145);
+            kbImages.Location = new Point(15, 115);
             kbImages.Margin = new Padding(15, 5, 15, 0);
             kbImages.Name = "kbImages";
             kbImages.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
@@ -158,7 +159,7 @@
             // kbDashboard
             // 
             kbDashboard.CornerRoundingRadius = 8F;
-            kbDashboard.Location = new Point(15, 98);
+            kbDashboard.Location = new Point(15, 68);
             kbDashboard.Margin = new Padding(15, 15, 15, 0);
             kbDashboard.Name = "kbDashboard";
             kbDashboard.OverrideDefault.Back.Color1 = Color.FromArgb(76, 76, 114);
@@ -184,12 +185,12 @@
             // 
             // pnlLogo
             // 
-            pnlLogo.BackColor = Color.FromArgb(36, 36, 54);
+            pnlLogo.BackColor = Color.FromArgb(51, 51, 76);
             pnlLogo.Controls.Add(lblLogo);
             pnlLogo.Dock = DockStyle.Top;
             pnlLogo.Location = new Point(0, 0);
             pnlLogo.Name = "pnlLogo";
-            pnlLogo.Size = new Size(220, 80);
+            pnlLogo.Size = new Size(220, 50);
             pnlLogo.TabIndex = 0;
             // 
             // lblLogo
@@ -197,7 +198,7 @@
             lblLogo.Anchor = AnchorStyles.None;
             lblLogo.Font = new Font("BPreplay PL", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             lblLogo.ForeColor = Color.White;
-            lblLogo.Location = new Point(15, 15);
+            lblLogo.Location = new Point(15, 0);
             lblLogo.Margin = new Padding(15);
             lblLogo.Name = "lblLogo";
             lblLogo.Size = new Size(190, 50);
@@ -226,29 +227,31 @@
             pnlTitleBar.Controls.Add(lblTitle);
             pnlTitleBar.Dock = DockStyle.Top;
             pnlTitleBar.Location = new Point(220, 0);
+            pnlTitleBar.Margin = new Padding(0);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(715, 80);
+            pnlTitleBar.Size = new Size(715, 50);
             pnlTitleBar.TabIndex = 1;
             // 
             // lblTitle
             // 
             lblTitle.Anchor = AnchorStyles.None;
-            lblTitle.AutoSize = true;
+            lblTitle.BackColor = Color.FromArgb(0, 0, 0, 0);
             lblTitle.Font = new Font("Roboto Medium", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.DeepSkyBlue;
-            lblTitle.Location = new Point(6, 27);
+            lblTitle.Location = new Point(249, 11);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(123, 28);
+            lblTitle.Size = new Size(200, 28);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Dashboard";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // kpForm
             // 
-            kpForm.Location = new Point(220, 80);
+            kpForm.Dock = DockStyle.Fill;
+            kpForm.Location = new Point(220, 50);
             kpForm.Margin = new Padding(0);
             kpForm.Name = "kpForm";
-            kpForm.Size = new Size(715, 502);
+            kpForm.Size = new Size(715, 532);
             kpForm.StateCommon.Color1 = Color.FromArgb(76, 76, 114);
             kpForm.StateCommon.Color2 = Color.FromArgb(90, 81, 121);
             kpForm.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear33;
@@ -262,9 +265,7 @@
             Controls.Add(kpForm);
             Controls.Add(pnlTitleBar);
             Controls.Add(pnlMenu);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximumSize = new Size(951, 621);
             MinimumSize = new Size(951, 621);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -275,7 +276,6 @@
             pnlMenuBottom.ResumeLayout(false);
             pnlLogo.ResumeLayout(false);
             pnlTitleBar.ResumeLayout(false);
-            pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kpForm).EndInit();
             ResumeLayout(false);
         }
@@ -287,12 +287,12 @@
         private Panel pnlTitleBar;
         private Label lblTitle;
         private Label lblLogo;
-        private Krypton.Toolkit.KryptonPanel kpForm;
         private Button btnNewVersion;
         private Krypton.Toolkit.KryptonButton kbDashboard;
         private Krypton.Toolkit.KryptonButton kbConsole;
         private Krypton.Toolkit.KryptonButton kbSettings;
         private Panel pnlMenuBottom;
         private Krypton.Toolkit.KryptonButton kbImages;
+        private Krypton.Toolkit.KryptonPanel kpForm;
     }
 }
