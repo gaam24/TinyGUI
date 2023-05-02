@@ -77,7 +77,7 @@
             lblInfoSpaceSaved.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblInfoSpaceSaved.BackColor = Color.PaleGreen;
             lblInfoSpaceSaved.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblInfoSpaceSaved.Location = new Point(3, 28);
+            lblInfoSpaceSaved.Location = new Point(3, 30);
             lblInfoSpaceSaved.Margin = new Padding(3);
             lblInfoSpaceSaved.Name = "lblInfoSpaceSaved";
             lblInfoSpaceSaved.Size = new Size(100, 21);
@@ -91,7 +91,7 @@
             lblInfoSpaceSavedTitle.BackColor = Color.MediumSeaGreen;
             lblInfoSpaceSavedTitle.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblInfoSpaceSavedTitle.ForeColor = Color.FromArgb(239, 247, 255);
-            lblInfoSpaceSavedTitle.Location = new Point(3, 2);
+            lblInfoSpaceSavedTitle.Location = new Point(3, 4);
             lblInfoSpaceSavedTitle.Margin = new Padding(3);
             lblInfoSpaceSavedTitle.Name = "lblInfoSpaceSavedTitle";
             lblInfoSpaceSavedTitle.Size = new Size(100, 23);
@@ -115,7 +115,7 @@
             lblInfoOptimized.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblInfoOptimized.BackColor = Color.FromArgb(255, 192, 128);
             lblInfoOptimized.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblInfoOptimized.Location = new Point(3, 28);
+            lblInfoOptimized.Location = new Point(3, 30);
             lblInfoOptimized.Margin = new Padding(3);
             lblInfoOptimized.Name = "lblInfoOptimized";
             lblInfoOptimized.Size = new Size(153, 21);
@@ -129,7 +129,7 @@
             lblInfoOptimizedTitle.BackColor = Color.FromArgb(255, 128, 0);
             lblInfoOptimizedTitle.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblInfoOptimizedTitle.ForeColor = Color.FromArgb(239, 247, 255);
-            lblInfoOptimizedTitle.Location = new Point(3, 2);
+            lblInfoOptimizedTitle.Location = new Point(3, 4);
             lblInfoOptimizedTitle.Margin = new Padding(3);
             lblInfoOptimizedTitle.Name = "lblInfoOptimizedTitle";
             lblInfoOptimizedTitle.Size = new Size(153, 23);
@@ -153,7 +153,7 @@
             lblInfoFiles.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblInfoFiles.BackColor = Color.FromArgb(255, 128, 128);
             lblInfoFiles.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblInfoFiles.Location = new Point(3, 28);
+            lblInfoFiles.Location = new Point(3, 29);
             lblInfoFiles.Margin = new Padding(3);
             lblInfoFiles.Name = "lblInfoFiles";
             lblInfoFiles.Size = new Size(147, 21);
@@ -167,7 +167,7 @@
             lblInfoFilesTitle.BackColor = Color.Red;
             lblInfoFilesTitle.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblInfoFilesTitle.ForeColor = Color.FromArgb(239, 247, 255);
-            lblInfoFilesTitle.Location = new Point(3, 3);
+            lblInfoFilesTitle.Location = new Point(3, 4);
             lblInfoFilesTitle.Margin = new Padding(3);
             lblInfoFilesTitle.Name = "lblInfoFilesTitle";
             lblInfoFilesTitle.Size = new Size(147, 23);
@@ -238,7 +238,7 @@
             // 
             krtbInfo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             krtbInfo.Enabled = false;
-            krtbInfo.Location = new Point(3, 3);
+            krtbInfo.Location = new Point(2, 3);
             krtbInfo.Name = "krtbInfo";
             krtbInfo.ReadOnly = true;
             krtbInfo.Size = new Size(441, 68);

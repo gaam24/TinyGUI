@@ -90,7 +90,7 @@
             // 
             // ktbMaxRequestsPerAPI
             // 
-            ktbMaxRequestsPerAPI.Location = new Point(53, 399);
+            ktbMaxRequestsPerAPI.Location = new Point(57, 399);
             ktbMaxRequestsPerAPI.Margin = new Padding(3, 0, 3, 3);
             ktbMaxRequestsPerAPI.Name = "ktbMaxRequestsPerAPI";
             ktbMaxRequestsPerAPI.Size = new Size(176, 28);
@@ -106,7 +106,7 @@
             // 
             // ktbAPIParserThreads
             // 
-            ktbAPIParserThreads.Location = new Point(53, 326);
+            ktbAPIParserThreads.Location = new Point(57, 326);
             ktbAPIParserThreads.Margin = new Padding(3, 0, 3, 3);
             ktbAPIParserThreads.Name = "ktbAPIParserThreads";
             ktbAPIParserThreads.Size = new Size(176, 28);
@@ -123,7 +123,7 @@
             // ktbMaxRequestsPerAPITitle
             // 
             ktbMaxRequestsPerAPITitle.Enabled = false;
-            ktbMaxRequestsPerAPITitle.Location = new Point(63, 371);
+            ktbMaxRequestsPerAPITitle.Location = new Point(68, 371);
             ktbMaxRequestsPerAPITitle.Margin = new Padding(3, 15, 3, 0);
             ktbMaxRequestsPerAPITitle.Name = "ktbMaxRequestsPerAPITitle";
             ktbMaxRequestsPerAPITitle.ReadOnly = true;
@@ -142,11 +142,11 @@
             // kryptonTextBox1
             // 
             kryptonTextBox1.Enabled = false;
-            kryptonTextBox1.Location = new Point(68, 298);
+            kryptonTextBox1.Location = new Point(77, 298);
             kryptonTextBox1.Margin = new Padding(3, 15, 3, 0);
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.ReadOnly = true;
-            kryptonTextBox1.Size = new Size(145, 28);
+            kryptonTextBox1.Size = new Size(136, 28);
             kryptonTextBox1.StateCommon.Back.Color1 = Color.FromArgb(38, 38, 57);
             kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(38, 38, 57);
             kryptonTextBox1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -275,7 +275,7 @@
             // ktbCompressingThreadsTitle
             // 
             ktbCompressingThreadsTitle.Enabled = false;
-            ktbCompressingThreadsTitle.Location = new Point(34, 184);
+            ktbCompressingThreadsTitle.Location = new Point(35, 184);
             ktbCompressingThreadsTitle.Margin = new Padding(3, 15, 3, 0);
             ktbCompressingThreadsTitle.Name = "ktbCompressingThreadsTitle";
             ktbCompressingThreadsTitle.ReadOnly = true;
