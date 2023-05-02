@@ -35,6 +35,7 @@
             // 
             // consoleBox
             // 
+            consoleBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             consoleBox.Items.AddRange(new object[] { "asddasddadasdads" });
             consoleBox.Location = new Point(15, 15);
             consoleBox.Margin = new Padding(15);
