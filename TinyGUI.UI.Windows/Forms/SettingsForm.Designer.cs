@@ -341,6 +341,7 @@
             // 
             // kbReset
             // 
+            kbReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             kbReset.CornerRoundingRadius = 8F;
             kbReset.Location = new Point(550, 462);
             kbReset.Margin = new Padding(15);
