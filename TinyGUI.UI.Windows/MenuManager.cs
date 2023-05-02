@@ -8,22 +8,16 @@ namespace TinyGUI.UI.Windows
     internal sealed class MenuManager
     {
         private readonly List<MenuButton> menuButtons = new();
-        private readonly List<string> forceLoadList = new();
-
         private string? defaultMenuTitle;
 
         private readonly Label titleLabel;
-        private readonly Panel titlePanel;
-
-        private readonly Panel formPanel;
+        private readonly KryptonPanel formPanel;
 
         private KryptonButton? oldButton;
 
-        public MenuManager(Label titleLabel, Panel titlePanel, Panel formPanel)
+        public MenuManager(Label titleLabel, KryptonPanel formPanel)
         {
             this.titleLabel = titleLabel;
-            this.titlePanel = titlePanel;
-
             this.formPanel = formPanel;
         }
 
@@ -32,11 +26,6 @@ namespace TinyGUI.UI.Windows
             control.BackColor = Color.Transparent;
 
             menuButtons.Add(new MenuButton(title, button, control));
-        }
-
-        public void AddForceLoad(string title)
-        {
-            forceLoadList.Add(title);
         }
 
         public void SetDefaultMenu(string title)
@@ -54,10 +43,8 @@ namespace TinyGUI.UI.Windows
                 menuButton.Button.Text = menuButton.Title;
                 menuButton.Button.Click += (sender, e) => ButtonClickEvent(new MenuButtonClickEventArgs(menuButton));
 
-                if (forceLoadList.Contains(menuButton.Title))
-                {
-                    formPanel.Controls.Add(menuButton.UserControl);
-                }
+                // Force Load
+                formPanel.Controls.Add(menuButton.UserControl);
             });
             formPanel.Controls.Clear();
 
