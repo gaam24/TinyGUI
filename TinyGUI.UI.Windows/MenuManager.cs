@@ -19,6 +19,8 @@ namespace TinyGUI.UI.Windows
         {
             this.titleLabel = titleLabel;
             this.formPanel = formPanel;
+
+            this.formPanel.SizeChanged += FormPanel_SizeChanged;
         }
 
         public void AddButton(string title, KryptonButton button, UserControl control)
@@ -70,9 +72,20 @@ namespace TinyGUI.UI.Windows
             }
             oldButton = button;
 
+            // Change size to from size
+            menuButton.UserControl.Size = formPanel.Size;
+
             // Set UserControl
             formPanel.Controls.Clear();
             formPanel.Controls.Add(menuButton.UserControl);
+        }
+
+        private void FormPanel_SizeChanged(object? sender, EventArgs e)
+        {
+            if (formPanel.Controls.Count > 0)
+            {
+                formPanel.Controls[0].Size = formPanel.Size;
+            }
         }
     }
 }
