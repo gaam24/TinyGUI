@@ -215,7 +215,14 @@ namespace TinyGUI.UI.Windows.Forms
 
         private void ParserAPIEndedHandler(object sender, ParserAPIEndedEventArgs e)
         {
-            Console.WriteLine($"Parsed {e.ValidList.Count} of {e.APIKeys.Count} API keys in {TimeUtils.GetFormattedTime(e.Elapsed)}");
+            if (e.APIKeys.Count == 0 || e.ValidList.Count == 0)
+            {
+                Console.WriteLine($"Not found any API Keys.");
+            }
+            else
+            {
+                Console.WriteLine($"Parsed {e.ValidList.Count} of {e.APIKeys.Count} API keys in {TimeUtils.GetFormattedTime(e.Elapsed)}");
+            }
         }
     }
 }
